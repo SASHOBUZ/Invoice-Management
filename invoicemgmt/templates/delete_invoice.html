@@ -1,0 +1,18 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet">
+</head>
+
+
+<form method="post" action="">
+    {% csrf_token %}
+    <h1>Are you sure you want to delete?</h1><br>
+    <input class="btn btn-danger" type="submit" value="Yes, Confirm" />
+    <a href="/list_invoice">
+        <div class="btn btn-primary">No, Cancel</div>
+    </a>
+</form>
